@@ -1,0 +1,122 @@
+@import "tailwindcss";
+
+@theme {
+  /* Video Only brand colors — light theme matching videoonly.com */
+  --color-brand-yellow: #ffcc00;
+  --color-brand-gold: #ffd700;
+  --color-brand-red: #cc0000;
+  --color-brand-blue: #2266aa;
+  --color-brand-dark: #00325e;
+  --color-brand-darker: #001e3c;
+  --color-brand-accent: #ffaa00;
+  --color-brand-cyan: #40e0d0;
+  --color-page-bg: #ffffaa;
+  --color-surface: #ffffff;
+  --color-surface-light: #e5e7eb;
+  --color-surface-hover: #f3f4f6;
+  --color-text-primary: #1a1a1a;
+  --color-text-secondary: #4a4a4a;
+  --color-text-muted: #777777;
+  --color-oled-blue: #2266aa;
+  --color-oled-teal: #0d9488;
+  --color-score-low: #dc2626;
+  --color-score-mid: #ea580c;
+  --color-score-high: #16a34a;
+  --color-score-top: #15803d;
+  --color-table-header: #ffcc00;
+  --color-table-feature: #e8f4f8;
+  --color-table-divider: #cc0000;
+  --font-display: 'Roboto Condensed', 'Inter', system-ui, sans-serif;
+  --font-body: 'Roboto Condensed', 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-page-bg text-text-primary font-body antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .skip-link {
+    @apply absolute -top-10 left-4 z-[100] bg-brand-yellow text-brand-dark px-4 py-2 rounded-b-lg font-semibold;
+    @apply focus:top-0 transition-all;
+  }
+
+  .comparison-table-wrapper {
+    @apply overflow-x-auto -mx-4 px-4;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .comparison-table {
+    @apply w-full border-collapse text-sm;
+  }
+
+  .comparison-table th {
+    @apply font-semibold px-4 py-3 text-left whitespace-nowrap;
+    @apply sticky top-0 z-10;
+    background-color: var(--color-table-header);
+    color: var(--color-brand-dark);
+  }
+
+  .comparison-table td {
+    @apply px-4 py-3 border-b border-surface-light whitespace-nowrap text-text-primary;
+  }
+
+  .comparison-table tbody tr:hover {
+    @apply bg-surface-hover;
+  }
+
+  .comparison-table .feature-label {
+    @apply font-medium text-brand-dark sticky left-0 z-[5] min-w-[180px];
+    background-color: var(--color-table-feature);
+  }
+
+  .score-bar {
+    @apply h-2 rounded-full;
+    background: linear-gradient(90deg, var(--color-score-low) 0%, var(--color-score-mid) 50%, var(--color-score-high) 100%);
+  }
+
+  .cta-button {
+    @apply inline-flex items-center gap-2 bg-brand-accent text-brand-dark font-bold px-6 py-3 rounded-lg;
+    @apply hover:bg-brand-yellow transition-colors focus:outline-none focus:ring-2 focus:ring-brand-yellow focus:ring-offset-2;
+  }
+
+  .cta-button-outline {
+    @apply inline-flex items-center gap-2 border-2 border-brand-dark text-brand-dark font-bold px-6 py-3 rounded-lg;
+    @apply hover:bg-brand-dark hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-brand-dark focus:ring-offset-2;
+  }
+
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-bold;
+  }
+  .badge-value { @apply bg-green-600/20 text-green-700; }
+  .badge-picture { @apply bg-blue-600/20 text-blue-700; }
+  .badge-gaming { @apply bg-purple-600/20 text-purple-700; }
+  .badge-premium { @apply bg-amber-500/20 text-amber-700; }
+  .badge-sound { @apply bg-teal-600/20 text-teal-700; }
+
+  .brand-button {
+    @apply flex items-center gap-4 px-6 py-4 rounded-lg font-bold;
+    @apply transition-all hover:scale-[1.02] hover:shadow-lg;
+    background: linear-gradient(180deg, #f0a830 0%, #d4941c 100%);
+    border: 2px solid #c4861a;
+  }
+
+  .deal-card {
+    @apply bg-white rounded-xl p-6 border border-surface-light hover:border-brand-accent/50 transition-colors shadow-sm;
+  }
+
+  .save-badge {
+    @apply inline-flex items-center bg-brand-red text-white text-xs font-bold px-2 py-1 rounded;
+  }
+
+  .trade-in-badge {
+    @apply inline-flex items-center bg-brand-blue text-white text-xs font-bold px-2 py-1 rounded;
+  }
+}
