@@ -121,7 +121,7 @@ export default function ComparisonTable({ title, subtitle, columns, sections, pr
         )}
       </div>
 
-      <div className="comparison-table-wrapper rounded-xl border border-surface-light/50 overflow-hidden">
+      <div className="comparison-table-wrapper rounded-xl border border-surface-light/50">
         <table className="comparison-table" role="table">
           <caption className="sr-only">{title} comparison</caption>
           <thead>
@@ -174,7 +174,7 @@ export default function ComparisonTable({ title, subtitle, columns, sections, pr
       {priceSection && (
         <div className="mt-8">
           <h2 className="text-2xl font-bold mb-4">Screen Sizes &amp; Suggested Retail Prices</h2>
-          <div className="comparison-table-wrapper rounded-xl border border-surface-light/50 overflow-hidden">
+          <div className="comparison-table-wrapper rounded-xl border border-surface-light/50">
             <table className="comparison-table" role="table">
               <caption className="sr-only">Prices by screen size</caption>
               <thead>

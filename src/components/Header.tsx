@@ -79,23 +79,23 @@ export default function Header() {
                 )}
                 {item.children && openDropdown === item.label && (
                   <div className="absolute top-full left-0 pt-2 w-56 z-50">
-                  <div className="bg-white rounded-xl shadow-xl border border-gray-200 py-2">
-                    {item.children.map((child) => (
-                      <Link
-                        key={child.href}
-                        href={child.href}
-                        className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:text-brand-blue hover:bg-gray-50 transition-colors"
-                        onClick={() => setOpenDropdown(null)}
-                      >
-                        {'logo' in child && child.logo && (
-                          <span className="w-20 shrink-0 flex items-center">
-                            <Image src={child.logo} alt="" width={80} height={24} className="h-4 w-auto" />
-                          </span>
-                        )}
-                        {child.label}
-                      </Link>
-                    ))}
-                  </div>
+                    <div className="bg-white rounded-xl shadow-xl border border-gray-200 py-2">
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 hover:text-brand-blue hover:bg-gray-50 transition-colors"
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          {'logo' in child && child.logo && (
+                            <span className="w-20 shrink-0 flex items-center">
+                              <Image src={child.logo} alt="" width={80} height={24} className="h-4 w-auto" />
+                            </span>
+                          )}
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
