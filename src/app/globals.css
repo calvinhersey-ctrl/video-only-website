@@ -58,14 +58,14 @@
   }
 
   .comparison-table th {
-    @apply font-semibold px-4 py-3 text-left whitespace-nowrap;
+    @apply font-semibold px-2 md:px-4 py-2 md:py-3 text-left whitespace-nowrap text-xs md:text-sm;
     @apply sticky top-0 z-10;
     background-color: var(--color-table-header);
     color: var(--color-brand-dark);
   }
 
   .comparison-table td {
-    @apply px-4 py-3 border-b border-surface-light whitespace-nowrap text-text-primary;
+    @apply px-2 md:px-4 py-2 md:py-3 border-b border-surface-light whitespace-nowrap text-text-primary text-xs md:text-sm;
   }
 
   .comparison-table tbody tr:hover {
@@ -73,7 +73,7 @@
   }
 
   .comparison-table .feature-label {
-    @apply font-medium text-brand-dark sticky left-0 z-[5] min-w-[180px];
+    @apply font-medium text-brand-dark sticky left-0 z-[5] min-w-[120px] md:min-w-[180px];
     background-color: var(--color-table-feature);
   }
 
