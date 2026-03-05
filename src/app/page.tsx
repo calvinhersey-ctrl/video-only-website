@@ -25,6 +25,14 @@ export default function HomePage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden bg-brand-blue">
+        <Image
+          src="/images/storefront-hero.png"
+          alt=""
+          fill
+          className="object-cover object-center"
+          priority
+        />
+        <div className="absolute inset-0 bg-brand-blue/70" />
         <div className="max-w-7xl mx-auto px-4 py-16 md:py-24 relative z-10">
           <div className="max-w-3xl">
             <p className="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-4">
