@@ -47,10 +47,6 @@ export default function Header() {
             <Image src="/images/video-only-logo.png" alt="Video Only" width={160} height={40} className="h-8 md:h-10 w-auto" priority />
           </Link>
 
-          <p className="hidden lg:block text-brand-yellow text-sm font-semibold italic tracking-wide">
-            &ldquo;Don&apos;t Be Sorry... Shop at Video Only.&rdquo;
-          </p>
-
           <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
             {navItems.map((item) => (
               <div
@@ -122,9 +118,6 @@ export default function Header() {
 
         {mobileOpen && (
           <nav className="md:hidden pb-4 border-t border-white/20 pt-4" aria-label="Mobile navigation">
-            <p className="text-brand-yellow text-sm font-semibold italic mb-4 px-2">
-              &ldquo;Don&apos;t Be Sorry... Shop at Video Only.&rdquo;
-            </p>
             {navItems.map((item) => (
               <div key={item.label} className="mb-1">
                 {item.href ? (
