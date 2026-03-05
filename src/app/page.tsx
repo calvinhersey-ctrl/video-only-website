@@ -65,7 +65,7 @@ export default function HomePage() {
       {/* TV Categories — matches videoonly.com style */}
       <section className="bg-[#ffffaa] py-16">
         <div className="max-w-2xl mx-auto px-4">
-          <div className="bg-white rounded-lg border-2 border-brand-yellow/60 p-8 md:p-10 shadow-md">
+          <div className="bg-white rounded-lg border-2 border-brand-yellow/60 p-4 md:p-10 shadow-md">
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 text-center mb-8">Which TV is right for you?</h2>
             <div className="flex flex-col items-center gap-4">
               {tvCategories.map((cat) => (
@@ -74,8 +74,8 @@ export default function HomePage() {
                   href={cat.href}
                   className={`brand-button group ${cat.wide ? 'w-full md:w-[90%]' : 'w-full md:w-[70%]'}`}
                 >
-                  <Image src={cat.logo} alt={cat.name} width={160} height={50} className={`${cat.wide ? 'h-10 md:h-12' : 'h-8 md:h-10'} w-auto`} />
-                  <span className="text-sm md:text-base font-black text-gray-900 tracking-wide leading-tight">{cat.label}</span>
+                  <Image src={cat.logo} alt={cat.name} width={160} height={50} className={`${cat.wide ? 'h-6 md:h-12' : 'h-5 md:h-10'} w-auto`} />
+                  <span className="text-xs md:text-base font-black text-gray-900 tracking-wide leading-tight">{cat.label}</span>
                 </Link>
               ))}
             </div>
@@ -86,7 +86,7 @@ export default function HomePage() {
       {/* Soundbars — same card style */}
       <section className="bg-[#ffffaa] pb-16 -mt-1">
         <div className="max-w-2xl mx-auto px-4">
-          <div className="bg-white rounded-lg border-2 border-brand-yellow/60 p-8 md:p-10 shadow-md">
+          <div className="bg-white rounded-lg border-2 border-brand-yellow/60 p-4 md:p-10 shadow-md">
             <h2 className="text-3xl md:text-4xl font-black text-gray-900 text-center mb-8">Sound Systems</h2>
             <div className="flex flex-col items-center gap-4">
               {soundbarCategories.map((cat) => (
@@ -95,8 +95,8 @@ export default function HomePage() {
                   href={cat.href}
                   className={`brand-button group ${cat.wide ? 'w-full md:w-[90%]' : 'w-full md:w-[70%]'}`}
                 >
-                  <Image src={cat.logo} alt={cat.name} width={160} height={50} className={`${cat.wide ? 'h-10 md:h-12' : 'h-8 md:h-10'} w-auto`} />
-                  <span className="text-sm md:text-base font-black text-gray-900 tracking-wide leading-tight">{cat.label}</span>
+                  <Image src={cat.logo} alt={cat.name} width={160} height={50} className={`${cat.wide ? 'h-6 md:h-12' : 'h-5 md:h-10'} w-auto`} />
+                  <span className="text-xs md:text-base font-black text-gray-900 tracking-wide leading-tight">{cat.label}</span>
                 </Link>
               ))}
             </div>

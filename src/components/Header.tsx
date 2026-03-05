@@ -88,7 +88,9 @@ export default function Header() {
                         onClick={() => setOpenDropdown(null)}
                       >
                         {'logo' in child && child.logo && (
-                          <Image src={child.logo} alt="" width={24} height={24} className="h-4 w-auto" />
+                          <span className="w-20 shrink-0 flex items-center">
+                            <Image src={child.logo} alt="" width={80} height={24} className="h-4 w-auto" />
+                          </span>
                         )}
                         {child.label}
                       </Link>
