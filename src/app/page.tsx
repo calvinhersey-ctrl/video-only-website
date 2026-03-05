@@ -29,31 +29,31 @@ export default function HomePage() {
           src="/images/storefront-hero.png"
           alt=""
           fill
-          className="object-cover object-center"
+          className="object-cover object-top md:object-center"
           priority
         />
-        <div className="absolute inset-0 bg-brand-blue/70" />
-        <div className="max-w-7xl mx-auto px-4 py-16 md:py-24 relative z-10">
+        <div className="absolute inset-0 bg-brand-blue/60 md:bg-brand-blue/70" />
+        <div className="max-w-7xl mx-auto px-4 py-10 md:py-24 relative z-10">
           <div className="max-w-3xl">
-            <p className="text-brand-yellow font-semibold text-sm uppercase tracking-widest mb-4">
+            <p className="text-brand-yellow font-semibold text-xs md:text-sm uppercase tracking-widest mb-2 md:mb-4">
               West Coast&apos;s Premier Home Electronics Retailer
             </p>
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black leading-tight mb-6 text-white">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-black leading-tight mb-3 md:mb-6 text-white">
               Expert Advice.<br />
               <span className="text-brand-yellow">Rock Bottom Prices.</span>
             </h1>
-            <p className="text-xl text-white/80 mb-4 max-w-xl">
+            <p className="text-base md:text-xl text-white/80 mb-3 md:mb-4 max-w-xl">
               Since 1982, Video Only has been the West Coast&apos;s trusted source for TVs, soundbars, and audio equipment. Compare specs, find deals, and visit one of our 16 showrooms.
             </p>
-            <p className="text-brand-yellow italic font-semibold text-lg mb-8">
+            <p className="text-brand-yellow italic font-semibold text-base md:text-lg mb-5 md:mb-8">
               &ldquo;Don&apos;t Be Sorry... Shop at Video Only.&rdquo;
             </p>
-            <div className="flex flex-wrap gap-4">
-              <Link href="/deals" className="cta-button text-lg">
+            <div className="flex flex-wrap gap-3 md:gap-4">
+              <Link href="/deals" className="cta-button text-base md:text-lg">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
                 This Week&apos;s Deals
               </Link>
-              <Link href="/locations/washington" className="inline-flex items-center gap-2 border-2 border-white text-white font-bold px-6 py-3 rounded-lg hover:bg-white hover:text-brand-blue transition-colors text-lg">
+              <Link href="/locations/washington" className="inline-flex items-center gap-2 border-2 border-white text-white font-bold px-4 md:px-6 py-2.5 md:py-3 rounded-lg hover:bg-white hover:text-brand-blue transition-colors text-base md:text-lg">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
                 Find a Store
               </Link>
